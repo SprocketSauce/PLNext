@@ -1,0 +1,2059 @@
+
+============================================
+TEST 0: 00_unbroken_program.pln
+============================================
+
+PROGRAM
+	DECL :: testprogram
+		CONST pi IS 3,
+		a IS 1;
+
+		VAR b : baa,
+		c : caa;
+
+		TYPE testtype => atype;
+
+		PROC myproc(a;b;c)
+
+		FUNC myfunc(d)
+
+	DECLARATION END
+
+	IMPL :: testimplementation
+		FUNC func;
+			PROC proc;
+				VAR a : aa, b : bb;
+				START
+					EXECUTE executedboi;
+					IF 45 * 7 THEN 
+						ifworked SET 10 
+					FI
+				STOP
+			;
+
+			WHILE 2 * 3 + 4 / 5 - 6
+				whileboi SET 9000
+			ELIHW
+		;
+		
+		START
+			settyboi SET 3 + 9
+		STOP
+	.
+
+TERMINATE
+
+OUTPUT:
+
+Constant pi set to 3
+Constant a set to 1
+Variable b set to baa
+Variable c set to caa
+Type testtype declared
+Program testprogram declaration unit detected
+Variable a set to aa
+Variable b set to bb
+executedboi executed
+Multiplication detected
+ifworked assigned
+If statement detected
+Compound statement detected
+Procedure proc declared
+Multiplication detected
+Division detected
+Addition detected
+Subtraction detected
+whileboi assigned
+While loop detected
+Function func declared
+Addition detected
+settyboi assigned
+Compound statement detected
+Implementation unit testimplementation detected
+
+
+============================================
+TEST 1: 01_basic_program.pln
+============================================
+
+PROGRAM
+	DECL :: testprogram
+		CONST pi IS 3,
+		a IS 1;
+
+		VAR b : baa,
+		c : caa;
+
+		TYPE testtype => atype;
+
+		PROC myproc(a;b;c)
+
+		FUNC myfunc(d)
+
+	DECLARATION END
+
+	IMPL :: testimplementation
+		FUNC func;
+			PROC proc;
+				VAR a : aa, b : bb;
+				START
+					EXECUTE executedboi;
+					IF 45 * 7 THEN 
+						ifworked SET 10 
+					FI
+				STOP
+			;
+
+			WHILE 2 * 3 + 4 / 5 - 6
+				whileboi SET 9000
+			ELIHW
+		;
+		
+		START
+			settyboi SET 3 + 9
+		STOP
+	.
+
+
+OUTPUT:
+
+Constant pi set to 3
+Constant a set to 1
+Variable b set to baa
+Variable c set to caa
+Type testtype declared
+Program testprogram declaration unit detected
+Variable a set to aa
+Variable b set to bb
+executedboi executed
+Multiplication detected
+ifworked assigned
+If statement detected
+Compound statement detected
+Procedure proc declared
+Multiplication detected
+Division detected
+Addition detected
+Subtraction detected
+whileboi assigned
+While loop detected
+Function func declared
+Addition detected
+settyboi assigned
+Compound statement detected
+Implementation unit testimplementation detected
+Parsing error on line 39: syntax error
+
+
+============================================
+TEST 2: 02_declaration_unit.pln
+============================================
+
+PROGRAM
+	DCL :: testprogram
+		CONST pi IS 3,
+		a IS 1;
+
+		VAR b : baa,
+		c : caa;
+
+		TYPE testtype => atype;
+
+		PROC myproc(a;b;c)
+
+		FUNC myfunc(d)
+
+	DECLARATION END
+
+	IMPL :: testimplementation
+		FUNC func;
+			PROC proc;
+				VAR a : aa, b : bb;
+				START
+					EXECUTE executedboi;
+					IF 45 * 7 THEN 
+						ifworked SET 10 
+					FI
+				STOP
+			;
+
+			WHILE 2 * 3 + 4 / 5 - 6
+				whileboi SET 9000
+			ELIHW
+		;
+		
+		START
+			settyboi SET 3 + 9
+		STOP
+	.
+
+TERMINATE
+
+OUTPUT:
+
+Parsing error on line 2: syntax error
+
+
+============================================
+TEST 3: 03_procedure_interface.pln
+============================================
+
+PROGRAM
+	DECL :: testprogram
+		CONST pi IS 3,
+		a IS 1;
+
+		VAR b : baa,
+		c : caa;
+
+		TYPE testtype => atype;
+
+		PROC (a;b;c)
+
+		FUNC myfunc(d)
+
+	DECLARATION END
+
+	IMPL :: testimplementation
+		FUNC func;
+			PROC proc;
+				VAR a : aa, b : bb;
+				START
+					EXECUTE executedboi;
+					IF 45 * 7 THEN 
+						ifworked SET 10 
+					FI
+				STOP
+			;
+
+			WHILE 2 * 3 + 4 / 5 - 6
+				whileboi SET 9000
+			ELIHW
+		;
+		
+		START
+			settyboi SET 3 + 9
+		STOP
+	.
+
+TERMINATE
+
+OUTPUT:
+
+Constant pi set to 3
+Constant a set to 1
+Variable b set to baa
+Variable c set to caa
+Type testtype declared
+Parsing error on line 11: syntax error
+
+
+============================================
+TEST 4: 04_function_interface.pln
+============================================
+
+PROGRAM
+	DECL :: testprogram
+		CONST pi IS 3,
+		a IS 1;
+
+		VAR b : baa,
+		c : caa;
+
+		TYPE testtype => atype;
+
+		PROC myproc(a;b;c)
+
+		FUC myfunc(d)
+
+	DECLARATION END
+
+	IMPL :: testimplementation
+		FUNC func;
+			PROC proc;
+				VAR a : aa, b : bb;
+				START
+					EXECUTE executedboi;
+					IF 45 * 7 THEN 
+						ifworked SET 10 
+					FI
+				STOP
+			;
+
+			WHILE 2 * 3 + 4 / 5 - 6
+				whileboi SET 9000
+			ELIHW
+		;
+		
+		START
+			settyboi SET 3 + 9
+		STOP
+	.
+
+TERMINATE
+
+OUTPUT:
+
+Constant pi set to 3
+Constant a set to 1
+Variable b set to baa
+Variable c set to caa
+Type testtype declared
+Parsing error on line 13: syntax error
+
+
+============================================
+TEST 5: 05_type_declaration.pln
+============================================
+
+PROGRAM
+	DECL :: testprogram
+		CONST pi IS 3,
+		a IS 1;
+
+		VAR b : baa,
+		c : caa;
+
+		TYPE testtype => ;
+
+		PROC myproc(a;b;c)
+
+		FUNC myfunc(d)
+
+	DECLARATION END
+
+	IMPL :: testimplementation
+		FUNC func;
+			PROC proc;
+				VAR a : aa, b : bb;
+				START
+					EXECUTE executedboi;
+					IF 45 * 7 THEN 
+						ifworked SET 10 
+					FI
+				STOP
+			;
+
+			WHILE 2 * 3 + 4 / 5 - 6
+				whileboi SET 9000
+			ELIHW
+		;
+		
+		START
+			settyboi SET 3 + 9
+		STOP
+	.
+
+TERMINATE
+
+OUTPUT:
+
+Constant pi set to 3
+Constant a set to 1
+Variable b set to baa
+Variable c set to caa
+Parsing error on line 9: syntax error
+
+
+============================================
+TEST 6: 06_formal_parameters.pln
+============================================
+
+PROGRAM
+	DECL :: testprogram
+		CONST pi IS 3,
+		a IS 1;
+
+		VAR b : baa,
+		c : caa;
+
+		TYPE testtype => atype;
+
+		PROC myproc(a;b,c)
+
+		FUNC myfunc(d)
+
+	DECLARATION END
+
+	IMPL :: testimplementation
+		FUNC func;
+			PROC proc;
+				VAR a : aa, b : bb;
+				START
+					EXECUTE executedboi;
+					IF 45 * 7 THEN 
+						ifworked SET 10 
+					FI
+				STOP
+			;
+
+			WHILE 2 * 3 + 4 / 5 - 6
+				whileboi SET 9000
+			ELIHW
+		;
+		
+		START
+			settyboi SET 3 + 9
+		STOP
+	.
+
+TERMINATE
+
+OUTPUT:
+
+Constant pi set to 3
+Constant a set to 1
+Variable b set to baa
+Variable c set to caa
+Type testtype declared
+Parsing error on line 11: syntax error
+
+
+============================================
+TEST 7: 07_constant_declaration.pln
+============================================
+
+PROGRAM
+	DECL :: testprogram
+		CONST pi IS GONNA BE 3, BRO;
+		a IS 1;
+
+		VAR b : baa,
+		c : caa;
+
+		TYPE testtype => atype;
+
+		PROC myproc(a;b;c)
+
+		FUNC myfunc(d)
+
+	DECLARATION END
+
+	IMPL :: testimplementation
+		FUNC func;
+			PROC proc;
+				VAR a : aa, b : bb;
+				START
+					EXECUTE executedboi;
+					IF 45 * 7 THEN 
+						ifworked SET 10 
+					FI
+				STOP
+			;
+
+			WHILE 2 * 3 + 4 / 5 - 6
+				whileboi SET 9000
+			ELIHW
+		;
+		
+		START
+			settyboi SET 3 + 9
+		STOP
+	.
+
+TERMINATE
+
+OUTPUT:
+
+Parsing error on line 3: syntax error
+
+
+============================================
+TEST 8: 08_variable_declaration.pln
+============================================
+
+PROGRAM
+	DECL :: testprogram
+		CONST pi IS 3,
+		a IS 1;
+
+		VAR b : baa,
+		c caa;
+
+		TYPE testtype => atype;
+
+		PROC myproc(a;b;c)
+
+		FUNC myfunc(d)
+
+	DECLARATION END
+
+	IMPL :: testimplementation
+		FUNC func;
+			PROC proc;
+				VAR a : aa, b : bb;
+				START
+					EXECUTE executedboi;
+					IF 45 * 7 THEN 
+						ifworked SET 10 
+					FI
+				STOP
+			;
+
+			WHILE 2 * 3 + 4 / 5 - 6
+				whileboi SET 9000
+			ELIHW
+		;
+		
+		START
+			settyboi SET 3 + 9
+		STOP
+	.
+
+TERMINATE
+
+OUTPUT:
+
+Constant pi set to 3
+Constant a set to 1
+Variable b set to baa
+Parsing error on line 7: syntax error
+
+
+============================================
+TEST 9: 09_type.pln
+============================================
+
+PROGRAM
+	DECL :: testprogram
+		CONST pi IS 3,
+		a IS 1;
+
+		VAR b : baa,
+		c : caa;
+
+		TYPE There should be a type here;
+
+		PROC myproc(a;b;c)
+
+		FUNC myfunc(d)
+
+	DECLARATION END
+
+	IMPL :: testimplementation
+		FUNC func;
+			PROC proc;
+				VAR a : aa, b : bb;
+				START
+					EXECUTE executedboi;
+					IF 45 * 7 THEN 
+						ifworked SET 10 
+					FI
+				STOP
+			;
+
+			WHILE 2 * 3 + 4 / 5 - 6
+				whileboi SET 9000
+			ELIHW
+		;
+		
+		START
+			settyboi SET 3 + 9
+		STOP
+	.
+
+TERMINATE
+
+OUTPUT:
+
+Constant pi set to 3
+Constant a set to 1
+Variable b set to baa
+Variable c set to caa
+Parsing error on line 9: syntax error
+
+
+============================================
+TEST 10: 10_basic_type.pln
+============================================
+
+PROGRAM
+	DECL :: testprogram
+		CONST pi IS 3,
+		a IS 1;
+
+		VAR b : baa,
+		c : caa;
+
+		TYPE basicType => OH NO THAT ISN'T A BASIC TYPE;
+
+		PROC myproc(a;b;c)
+
+		FUNC myfunc(d)
+
+	DECLARATION END
+
+	IMPL :: testimplementation
+		FUNC func;
+			PROC proc;
+				VAR a : aa, b : bb;
+				START
+					EXECUTE executedboi;
+					IF 45 * 7 THEN 
+						ifworked SET 10 
+					FI
+				STOP
+			;
+
+			WHILE 2 * 3 + 4 / 5 - 6
+				whileboi SET 9000
+			ELIHW
+		;
+		
+		START
+			settyboi SET 3 + 9
+		STOP
+	.
+
+TERMINATE
+
+OUTPUT:
+
+Constant pi set to 3
+Constant a set to 1
+Variable b set to baa
+Variable c set to caa
+Parsing error on line 9: syntax error
+
+
+============================================
+TEST 11: 11_enumerated_type.pln
+============================================
+
+PROGRAM
+	DECL :: testprogram
+		CONST pi IS 3,
+		a IS 1;
+
+		VAR b : baa,
+		c : caa;
+
+		TYPE enumtype => {where, is, the, other, curlyboi;
+
+		PROC myproc(a;b;c)
+
+		FUNC myfunc(d)
+
+	DECLARATION END
+
+	IMPL :: testimplementation
+		FUNC func;
+			PROC proc;
+				VAR a : aa, b : bb;
+				START
+					EXECUTE executedboi;
+					IF 45 * 7 THEN 
+						ifworked SET 10 
+					FI
+				STOP
+			;
+
+			WHILE 2 * 3 + 4 / 5 - 6
+				whileboi SET 9000
+			ELIHW
+		;
+		
+		START
+			settyboi SET 3 + 9
+		STOP
+	.
+
+TERMINATE
+
+OUTPUT:
+
+Constant pi set to 3
+Constant a set to 1
+Variable b set to baa
+Variable c set to caa
+Enum entry 1: where
+Enum entry 2: is
+Enum entry 3: the
+Enum entry 4: other
+Enum entry 5: curlyboi
+Parsing error on line 9: syntax error
+
+
+============================================
+TEST 12: 12_range_type.pln
+============================================
+
+PROGRAM
+	DECL :: testprogram
+		CONST pi IS 3,
+		a IS 1;
+
+		VAR b : baa,
+		c : caa;
+
+		TYPE rangetype => [10 TWO 20];
+
+		PROC myproc(a;b;c)
+
+		FUNC myfunc(d)
+
+	DECLARATION END
+
+	IMPL :: testimplementation
+		FUNC func;
+			PROC proc;
+				VAR a : aa, b : bb;
+				START
+					EXECUTE executedboi;
+					IF 45 * 7 THEN 
+						ifworked SET 10 
+					FI
+				STOP
+			;
+
+			WHILE 2 * 3 + 4 / 5 - 6
+				whileboi SET 9000
+			ELIHW
+		;
+		
+		START
+			settyboi SET 3 + 9
+		STOP
+	.
+
+TERMINATE
+
+OUTPUT:
+
+Constant pi set to 3
+Constant a set to 1
+Variable b set to baa
+Variable c set to caa
+Parsing error on line 9: syntax error
+
+
+============================================
+TEST 13: 13_array_type.pln
+============================================
+
+PROGRAM
+	DECL :: testprogram
+		CONST pi IS 3,
+		a IS 1;
+
+		VAR b : baa,
+		c : caa;
+
+		TYPE testtype => ARR array [10 TO 20 OF int;
+
+		PROC myproc(a;b;c)
+
+		FUNC myfunc(d)
+
+	DECLARATION END
+
+	IMPL :: testimplementation
+		FUNC func;
+			PROC proc;
+				VAR a : aa, b : bb;
+				START
+					EXECUTE executedboi;
+					IF 45 * 7 THEN 
+						ifworked SET 10 
+					FI
+				STOP
+			;
+
+			WHILE 2 * 3 + 4 / 5 - 6
+				whileboi SET 9000
+			ELIHW
+		;
+		
+		START
+			settyboi SET 3 + 9
+		STOP
+	.
+
+TERMINATE
+
+OUTPUT:
+
+Constant pi set to 3
+Constant a set to 1
+Variable b set to baa
+Variable c set to caa
+Parsing error on line 9: syntax error
+
+
+============================================
+TEST 14: 14_range.pln
+============================================
+
+PROGRAM
+	DECL :: testprogram
+		CONST pi IS 3,
+		a IS 1;
+
+		VAR b : baa,
+		c : caa;
+
+		TYPE testtype => [15 TO disaster];
+
+		PROC myproc(a;b;c)
+
+		FUNC myfunc(d)
+
+	DECLARATION END
+
+	IMPL :: testimplementation
+		FUNC func;
+			PROC proc;
+				VAR a : aa, b : bb;
+				START
+					EXECUTE executedboi;
+					IF 45 * 7 THEN 
+						ifworked SET 10 
+					FI
+				STOP
+			;
+
+			WHILE 2 * 3 + 4 / 5 - 6
+				whileboi SET 9000
+			ELIHW
+		;
+		
+		START
+			settyboi SET 3 + 9
+		STOP
+	.
+
+TERMINATE
+
+OUTPUT:
+
+Constant pi set to 3
+Constant a set to 1
+Variable b set to baa
+Variable c set to caa
+Parsing error on line 9: syntax error
+
+
+============================================
+TEST 15: 15_implementation_unit.pln
+============================================
+
+PROGRAM
+	DECL :: testprogram
+		CONST pi IS 3,
+		a IS 1;
+
+		VAR b : baa,
+		c : caa;
+
+		TYPE testtype => atype;
+
+		PROC myproc(a;b;c)
+
+		FUNC myfunc(d)
+
+	DECLARATION END
+
+	IMP :: testimplementation
+		FUNC func;
+			PROC proc;
+				VAR a : aa, b : bb;
+				START
+					EXECUTE executedboi;
+					IF 45 * 7 THEN 
+						ifworked SET 10 
+					FI
+				STOP
+			;
+
+			WHILE 2 * 3 + 4 / 5 - 6
+				whileboi SET 9000
+			ELIHW
+		;
+		
+		START
+			settyboi SET 3 + 9
+		STOP
+	.
+
+TERMINATE
+
+OUTPUT:
+
+Constant pi set to 3
+Constant a set to 1
+Variable b set to baa
+Variable c set to caa
+Type testtype declared
+Program testprogram declaration unit detected
+Parsing error on line 17: syntax error
+
+
+============================================
+TEST 16: 16_block.pln
+============================================
+
+PROGRAM
+	DECL :: testprogram
+		CONST pi IS 3,
+		a IS 1;
+
+		VAR b : baa,
+		c : caa;
+
+		TYPE testtype => atype;
+
+		PROC myproc(a;b;c)
+
+		FUNC myfunc(d)
+
+	DECLARATION END
+
+	IMPL :: testimplementation
+		FUNC func;
+			PROC proc;
+				VAR a : aa, b : bb;
+				START
+					EXECUTE executedboi;
+					IF 45 * 7 THEN 
+						ifworked SET 10 
+					FI
+				STOP
+			;
+
+			WHILE 2 * 3 + 4 / 5 - 6
+				whileboi SET 9000
+			ELIHW
+		;
+		
+	.
+
+TERMINATE
+
+OUTPUT:
+
+Constant pi set to 3
+Constant a set to 1
+Variable b set to baa
+Variable c set to caa
+Type testtype declared
+Program testprogram declaration unit detected
+Variable a set to aa
+Variable b set to bb
+executedboi executed
+Multiplication detected
+ifworked assigned
+If statement detected
+Compound statement detected
+Procedure proc declared
+Multiplication detected
+Division detected
+Addition detected
+Subtraction detected
+whileboi assigned
+While loop detected
+Function func declared
+Parsing error on line 34: syntax error
+
+
+============================================
+TEST 17: 17_specification_part.pln
+============================================
+
+PROGRAM
+	DECL :: testprogram
+		CONST pi IS 3,
+		a IS 1;
+
+		VAR b : baa,
+		c : caa;
+
+		TYPE testtype => atype;
+
+		PROC myproc(a;b;c)
+
+		FUNC myfunc(d)
+
+	DECLARATION END
+
+	IMPL :: testimplementation
+		VAR notavardeclaration IS 1
+
+		START
+			settyboi SET 3 + 9
+		STOP
+	.
+
+TERMINATE
+
+OUTPUT:
+
+Constant pi set to 3
+Constant a set to 1
+Variable b set to baa
+Variable c set to caa
+Type testtype declared
+Program testprogram declaration unit detected
+Parsing error on line 18: syntax error
+
+
+============================================
+TEST 18: 18_procedure_declaration.pln
+============================================
+
+PROGRAM
+	DECL :: testprogram
+		CONST pi IS 3,
+		a IS 1;
+
+		VAR b : baa,
+		c : caa;
+
+		TYPE testtype => atype;
+
+		PROC myproc(a;b;c)
+
+		FUNC myfunc(d)
+
+	DECLARATION END
+
+	IMPL :: testimplementation
+		FUNC func;
+			PROCMEBABY proc;
+				VAR a : aa, b : bb;
+				START
+					EXECUTE executedboi;
+					IF 45 * 7 THEN 
+						ifworked SET 10 
+					FI
+				STOP
+			;
+
+			WHILE 2 * 3 + 4 / 5 - 6
+				whileboi SET 9000
+			ELIHW
+		;
+		
+		START
+			settyboi SET 3 + 9
+		STOP
+	.
+
+TERMINATE
+
+OUTPUT:
+
+Constant pi set to 3
+Constant a set to 1
+Variable b set to baa
+Variable c set to caa
+Type testtype declared
+Program testprogram declaration unit detected
+Parsing error on line 19: syntax error
+
+
+============================================
+TEST 19: 19_function_declaration.pln
+============================================
+
+PROGRAM
+	DECL :: testprogram
+		CONST pi IS 3,
+		a IS 1;
+
+		VAR b : baa,
+		c : caa;
+
+		TYPE testtype => atype;
+
+		PROC myproc(a;b;c)
+
+		FUNC myfunc(d)
+
+	DECLARATION END
+
+	IMPL :: testimplementation
+		FUNC funcWithoutSemicolon
+			PROC proc;
+				VAR a : aa, b : bb;
+				START
+					EXECUTE executedboi;
+					IF 45 * 7 THEN 
+						ifworked SET 10 
+					FI
+				STOP
+			;
+
+			WHILE 2 * 3 + 4 / 5 - 6
+				whileboi SET 9000
+			ELIHW
+		;
+		
+		START
+			settyboi SET 3 + 9
+		STOP
+	.
+
+TERMINATE
+
+OUTPUT:
+
+Constant pi set to 3
+Constant a set to 1
+Variable b set to baa
+Variable c set to caa
+Type testtype declared
+Program testprogram declaration unit detected
+Parsing error on line 18: syntax error
+
+
+============================================
+TEST 20: 20_implementation_part.pln
+============================================
+
+PROGRAM
+	DECL :: testprogram
+		CONST pi IS 3,
+		a IS 1;
+
+		VAR b : baa,
+		c : caa;
+
+		TYPE testtype => atype;
+
+		PROC myproc(a;b;c)
+
+		FUNC myfunc(d)
+
+	DECLARATION END
+
+	IMPL :: testimplementation
+		FUNC func;
+			PROC noimplementation;
+				VAR a : aa, b : bb;
+			;
+
+			WHILE 2 * 3 + 4 / 5 - 6
+				whileboi SET 9000
+			ELIHW
+		;
+		
+		START
+			settyboi SET 3 + 9
+		STOP
+	.
+
+TERMINATE
+
+OUTPUT:
+
+Constant pi set to 3
+Constant a set to 1
+Variable b set to baa
+Variable c set to caa
+Type testtype declared
+Program testprogram declaration unit detected
+Variable a set to aa
+Variable b set to bb
+Parsing error on line 21: syntax error
+
+
+============================================
+TEST 21: 21_statement.pln
+============================================
+
+PROGRAM
+	DECL :: testprogram
+		CONST pi IS 3,
+		a IS 1;
+
+		VAR b : baa,
+		c : caa;
+
+		TYPE testtype => atype;
+
+		PROC myproc(a;b;c)
+
+		FUNC myfunc(d)
+
+	DECLARATION END
+
+	IMPL :: testimplementation
+		FUNC func;
+			PROC proc;
+				VAR a : aa, b : bb;
+				START
+					EXECUTE executedboi;
+					IF 45 * 7 THEN 
+						ifworked SET 10 
+					FI
+				STOP
+			;
+
+			WHILE 2 * 3 + 4 / 5 - 6
+				whileboi SET 9000
+			ELIHW
+		;
+		
+		START
+			THIS STATEMENT ISN'T MY REAL DAD
+		STOP
+	.
+
+TERMINATE
+
+OUTPUT:
+
+Constant pi set to 3
+Constant a set to 1
+Variable b set to baa
+Variable c set to caa
+Type testtype declared
+Program testprogram declaration unit detected
+Variable a set to aa
+Variable b set to bb
+executedboi executed
+Multiplication detected
+ifworked assigned
+If statement detected
+Compound statement detected
+Procedure proc declared
+Multiplication detected
+Division detected
+Addition detected
+Subtraction detected
+whileboi assigned
+While loop detected
+Function func declared
+Parsing error on line 35: syntax error
+
+
+============================================
+TEST 22: 22_assignment.pln
+============================================
+
+PROGRAM
+	DECL :: testprogram
+		CONST pi IS 3,
+		a IS 1;
+
+		VAR b : baa,
+		c : caa;
+
+		TYPE testtype => atype;
+
+		PROC myproc(a;b;c)
+
+		FUNC myfunc(d)
+
+	DECLARATION END
+
+	IMPL :: testimplementation
+		FUNC func;
+			PROC proc;
+				VAR a : aa, b : bb;
+				START
+					EXECUTE executedboi;
+					IF 45 * 7 THEN 
+						ifworked SET 10 
+					FI
+				STOP
+			;
+
+			WHILE 2 * 3 + 4 / 5 - 6
+				whileboi SET 9000
+			ELIHW
+		;
+		
+		START
+			settyboi SET not an expression
+		STOP
+	.
+
+TERMINATE
+
+OUTPUT:
+
+Constant pi set to 3
+Constant a set to 1
+Variable b set to baa
+Variable c set to caa
+Type testtype declared
+Program testprogram declaration unit detected
+Variable a set to aa
+Variable b set to bb
+executedboi executed
+Multiplication detected
+ifworked assigned
+If statement detected
+Compound statement detected
+Procedure proc declared
+Multiplication detected
+Division detected
+Addition detected
+Subtraction detected
+whileboi assigned
+While loop detected
+Function func declared
+settyboi assigned
+Parsing error on line 35: syntax error
+
+
+============================================
+TEST 23: 23_procedure_call.pln
+============================================
+
+PROGRAM
+	DECL :: testprogram
+		CONST pi IS 3,
+		a IS 1;
+
+		VAR b : baa,
+		c : caa;
+
+		TYPE testtype => atype;
+
+		PROC myproc(a;b;c)
+
+		FUNC myfunc(d)
+
+	DECLARATION END
+
+	IMPL :: testimplementation
+		FUNC func;
+			PROC proc;
+				VAR a : aa, b : bb;
+				START
+					EXECUTE 420;
+					IF 45 * 7 THEN 
+						ifworked SET 10 
+					FI
+				STOP
+			;
+
+			WHILE 2 * 3 + 4 / 5 - 6
+				whileboi SET 9000
+			ELIHW
+		;
+		
+		START
+			settyboi SET 3 + 9
+		STOP
+	.
+
+TERMINATE
+
+OUTPUT:
+
+Constant pi set to 3
+Constant a set to 1
+Variable b set to baa
+Variable c set to caa
+Type testtype declared
+Program testprogram declaration unit detected
+Variable a set to aa
+Variable b set to bb
+Parsing error on line 22: syntax error
+
+
+============================================
+TEST 24: 24_if_statement.pln
+============================================
+
+PROGRAM
+	DECL :: testprogram
+		CONST pi IS 3,
+		a IS 1;
+
+		VAR b : baa,
+		c : caa;
+
+		TYPE testtype => atype;
+
+		PROC myproc(a;b;c)
+
+		FUNC myfunc(d)
+
+	DECLARATION END
+
+	IMPL :: testimplementation
+		FUNC func;
+			PROC proc;
+				VAR a : aa, b : bb;
+				START
+					EXECUTE executedboi;
+					IF 45 * 7 THEN 
+						ifworked SET 10 
+					FI
+				STOP
+			;
+
+			WHILE 2 * 3 + 4 / 5 - 6
+				whileboi SET 9000
+			ELIHW
+		;
+		
+		IF 3 + 5 THN
+			iffyboi SET 5
+		FI
+	.
+
+TERMINATE
+
+OUTPUT:
+
+Constant pi set to 3
+Constant a set to 1
+Variable b set to baa
+Variable c set to caa
+Type testtype declared
+Program testprogram declaration unit detected
+Variable a set to aa
+Variable b set to bb
+executedboi executed
+Multiplication detected
+ifworked assigned
+If statement detected
+Compound statement detected
+Procedure proc declared
+Multiplication detected
+Division detected
+Addition detected
+Subtraction detected
+whileboi assigned
+While loop detected
+Function func declared
+Addition detected
+Parsing error on line 34: syntax error
+
+
+============================================
+TEST 25: 25_while_statement.pln
+============================================
+
+PROGRAM
+	DECL :: testprogram
+		CONST pi IS 3,
+		a IS 1;
+
+		VAR b : baa,
+		c : caa;
+
+		TYPE testtype => atype;
+
+		PROC myproc(a;b;c)
+
+		FUNC myfunc(d)
+
+	DECLARATION END
+
+	IMPL :: testimplementation
+		FUNC func;
+			PROC proc;
+				VAR a : aa, b : bb;
+				START
+					EXECUTE executedboi;
+					IF 45 * 7 THEN 
+						ifworked SET 10 
+					FI
+				STOP
+			;
+
+			WHILE 2 * 3 + 4 / 5 - 6
+				whileboi SET 9000
+			ELIHWISASTUPIDWAYTOENDAWHILELOOP
+		;
+		
+		START
+			settyboi SET 3 + 9
+		STOP
+	.
+
+TERMINATE
+
+OUTPUT:
+
+Constant pi set to 3
+Constant a set to 1
+Variable b set to baa
+Variable c set to caa
+Type testtype declared
+Program testprogram declaration unit detected
+Variable a set to aa
+Variable b set to bb
+executedboi executed
+Multiplication detected
+ifworked assigned
+If statement detected
+Compound statement detected
+Procedure proc declared
+Multiplication detected
+Division detected
+Addition detected
+Subtraction detected
+whileboi assigned
+While loop detected
+Parsing error on line 31: syntax error
+
+
+============================================
+TEST 26: 26_do_statement.pln
+============================================
+
+PROGRAM
+	DECL :: testprogram
+		CONST pi IS 3,
+		a IS 1;
+
+		VAR b : baa,
+		c : caa;
+
+		TYPE testtype => atype;
+
+		PROC myproc(a;b;c)
+
+		FUNC myfunc(d)
+
+	DECLARATION END
+
+	IMPL :: testimplementation
+		FUNC func;
+			PROC proc;
+				VAR a : aa, b : bb;
+				START
+					EXECUTE executedboi;
+					IF 45 * 7 THEN 
+						ifworked SET 10 
+					FI
+				STOP
+			;
+			
+			DO
+				doa SET 1 + 2;
+				dob SET 3 + 4
+			WHILE a * b ODD
+		;
+		
+		START
+			settyboi SET 3 + 9
+		STOP
+	.
+
+TERMINATE
+
+OUTPUT:
+
+Constant pi set to 3
+Constant a set to 1
+Variable b set to baa
+Variable c set to caa
+Type testtype declared
+Program testprogram declaration unit detected
+Variable a set to aa
+Variable b set to bb
+executedboi executed
+Multiplication detected
+ifworked assigned
+If statement detected
+Compound statement detected
+Procedure proc declared
+Addition detected
+doa assigned
+Addition detected
+dob assigned
+Multiplication detected
+Do-while loop detected
+Parsing error on line 32: syntax error
+
+
+============================================
+TEST 27: 27_for_statement.pln
+============================================
+
+PROGRAM
+	DECL :: testprogram
+		CONST pi IS 3,
+		a IS 1;
+
+		VAR b : baa,
+		c : caa;
+
+		TYPE testtype => atype;
+
+		PROC myproc(a;b;c)
+
+		FUNC myfunc(d)
+
+	DECLARATION END
+
+	IMPL :: testimplementation
+		FUNC func;
+			PROC proc;
+				VAR a : aa, b : bb;
+				START
+					EXECUTE executedboi;
+					IF 45 * 7 THEN 
+						ifworked SET 10 
+					FI
+				STOP
+			;
+
+			WHILE 2 * 3 + 4 / 5 - 6
+				whileboi SET 9000
+			ELIHW
+		;
+		
+		START
+			settyboi SET 3 + 9;
+			FOR forboi := 5 DO
+				firststatement SET hasnosemicolon
+				EXECUTE nextstatement
+			ROF
+		STOP
+	.
+
+TERMINATE
+
+OUTPUT:
+
+Constant pi set to 3
+Constant a set to 1
+Variable b set to baa
+Variable c set to caa
+Type testtype declared
+Program testprogram declaration unit detected
+Variable a set to aa
+Variable b set to bb
+executedboi executed
+Multiplication detected
+ifworked assigned
+If statement detected
+Compound statement detected
+Procedure proc declared
+Multiplication detected
+Division detected
+Addition detected
+Subtraction detected
+whileboi assigned
+While loop detected
+Function func declared
+Addition detected
+settyboi assigned
+firststatement assigned
+Parsing error on line 38: syntax error
+
+
+============================================
+TEST 28: 28_compound_statement.pln
+============================================
+
+PROGRAM
+	DECL :: testprogram
+		CONST pi IS 3,
+		a IS 1;
+
+		VAR b : baa,
+		c : caa;
+
+		TYPE testtype => atype;
+
+		PROC myproc(a;b;c)
+
+		FUNC myfunc(d)
+
+	DECLARATION END
+
+	IMPL :: testimplementation
+		FUNC func;
+			PROC proc;
+				VAR a : aa, b : bb;
+				START
+					EXECUTE executedboi;
+					IF 45 * 7 THEN 
+						ifworked SET 10 
+					FI
+				STOP
+			;
+
+			WHILE 2 * 3 + 4 / 5 - 6
+				whileboi SET 9000
+			ELIHW
+		;
+		
+		START
+			nosemicolonincompoundstatement SET 3 + 9
+			EXECUTE shouldntseethis
+		STOP
+	.
+
+TERMINATE
+
+OUTPUT:
+
+Constant pi set to 3
+Constant a set to 1
+Variable b set to baa
+Variable c set to caa
+Type testtype declared
+Program testprogram declaration unit detected
+Variable a set to aa
+Variable b set to bb
+executedboi executed
+Multiplication detected
+ifworked assigned
+If statement detected
+Compound statement detected
+Procedure proc declared
+Multiplication detected
+Division detected
+Addition detected
+Subtraction detected
+whileboi assigned
+While loop detected
+Function func declared
+Addition detected
+nosemicolonincompoundstatement assigned
+Parsing error on line 36: syntax error
+
+
+============================================
+TEST 29: 29_expression.pln
+============================================
+
+PROGRAM
+	DECL :: testprogram
+		CONST pi IS 3,
+		a IS 1;
+
+		VAR b : baa,
+		c : caa;
+
+		TYPE testtype => atype;
+
+		PROC myproc(a;b;c)
+
+		FUNC myfunc(d)
+
+	DECLARATION END
+
+	IMPL :: testimplementation
+		FUNC func;
+			PROC proc;
+				VAR a : aa, b : bb;
+				START
+					EXECUTE executedboi;
+					IF 45 * 7 THEN 
+						ifworked SET 10 
+					FI
+				STOP
+			;
+
+			WHILE 2 * 3 + 4 / 5 - 6
+				whileboi SET 9000
+			ELIHW
+		;
+		
+		START
+			settyboi SET 3 + WHERE WE'RE GOIN', SON, YOU DON'T NEED NO TERMS
+		STOP
+	.
+
+TERMINATE
+
+OUTPUT:
+
+Constant pi set to 3
+Constant a set to 1
+Variable b set to baa
+Variable c set to caa
+Type testtype declared
+Program testprogram declaration unit detected
+Variable a set to aa
+Variable b set to bb
+executedboi executed
+Multiplication detected
+ifworked assigned
+If statement detected
+Compound statement detected
+Procedure proc declared
+Multiplication detected
+Division detected
+Addition detected
+Subtraction detected
+whileboi assigned
+While loop detected
+Function func declared
+Parsing error on line 35: syntax error
+
+
+============================================
+TEST 30: 30_term.pln
+============================================
+
+PROGRAM
+	DECL :: testprogram
+		CONST pi IS 3,
+		a IS 1;
+
+		VAR b : baa,
+		c : caa;
+
+		TYPE testtype => atype;
+
+		PROC myproc(a;b;c)
+
+		FUNC myfunc(d)
+
+	DECLARATION END
+
+	IMPL :: testimplementation
+		FUNC func;
+			PROC proc;
+				VAR a : aa, b : bb;
+				START
+					EXECUTE executedboi;
+					IF 45 * 7 THEN 
+						ifworked SET 10 
+					FI
+				STOP
+			;
+
+			WHILE 2 * 3 + 4 // toomanyslashes - 6
+				whileboi SET 9000
+			ELIHW
+		;
+		
+		START
+			settyboi SET 3 + 9
+		STOP
+	.
+
+TERMINATE
+
+OUTPUT:
+
+Constant pi set to 3
+Constant a set to 1
+Variable b set to baa
+Variable c set to caa
+Type testtype declared
+Program testprogram declaration unit detected
+Variable a set to aa
+Variable b set to bb
+executedboi executed
+Multiplication detected
+ifworked assigned
+If statement detected
+Compound statement detected
+Procedure proc declared
+Multiplication detected
+Parsing error on line 29: syntax error
+
+
+============================================
+TEST 31: 31_id_num.pln
+============================================
+
+PROGRAM
+	DECL :: testprogram
+		CONST pi IS 3,
+		a IS 1;
+
+		VAR b : baa,
+		c : caa;
+
+		TYPE testtype => atype;
+
+		PROC myproc(a;b;c)
+
+		FUNC myfunc(d)
+
+	DECLARATION END
+
+	IMPL :: testimplementation
+		FUNC func;
+			PROC proc;
+				VAR a : aa, b : bb;
+				START
+					EXECUTE executedboi;
+					IF 45 * 7 THEN 
+						ifworked SET 10 
+					FI
+				STOP
+			;
+
+			WHILE 2 * 3 + 4 / 5 - 6
+				whileboi SET 9000
+			ELIHW
+		;
+		
+		START
+			illegal_character SET 3 + 9
+		STOP
+	.
+
+TERMINATE
+
+OUTPUT:
+
+Constant pi set to 3
+Constant a set to 1
+Variable b set to baa
+Variable c set to caa
+Type testtype declared
+Program testprogram declaration unit detected
+Variable a set to aa
+Variable b set to bb
+executedboi executed
+Multiplication detected
+ifworked assigned
+If statement detected
+Compound statement detected
+Procedure proc declared
+Multiplication detected
+Division detected
+Addition detected
+Subtraction detected
+whileboi assigned
+While loop detected
+Function func declared
+Parsing error on line 35: syntax error
+
+
+============================================
+TEST 32: 32_number.pln
+============================================
+
+PROGRAM
+	DECL :: testprogram
+		CONST pi IS 3,
+		a IS 1;
+
+		VAR b : baa,
+		c : caa;
+
+		TYPE testtype => atype;
+
+		PROC myproc(a;b;c)
+
+		FUNC myfunc(d)
+
+	DECLARATION END
+
+	IMPL :: testimplementation
+		FUNC func;
+			PROC proc;
+				VAR a : aa, b : bb;
+				START
+					EXECUTE executedboi;
+					IF 45 * 7 THEN 
+						ifworked SET 10 
+					FI
+				STOP
+			;
+
+			WHILE 2 * 3 + 4 / 5 - 6
+				whileboi SET 900nan0
+			ELIHW
+		;
+		
+		START
+			settyboi SET 3 + 9
+		STOP
+	.
+
+TERMINATE
+
+OUTPUT:
+
+Constant pi set to 3
+Constant a set to 1
+Variable b set to baa
+Variable c set to caa
+Type testtype declared
+Program testprogram declaration unit detected
+Variable a set to aa
+Variable b set to bb
+executedboi executed
+Multiplication detected
+ifworked assigned
+If statement detected
+Compound statement detected
+Procedure proc declared
+Multiplication detected
+Division detected
+Addition detected
+Subtraction detected
+whileboi assigned
+Parsing error on line 30: syntax error
+
+
+============================================
+TEST 33: 33_ident.pln
+============================================
+
+PROGRAM
+	DECL :: testprogram
+		CONST pi IS 3,
+		a IS 1;
+
+		VAR b : baa,
+		c : caa;
+
+		TYPE testtype => atype;
+
+		PROC myproc(a;b;c)
+
+		FUNC myfunc(d)
+
+	DECLARATION END
+
+	IMPL :: testimplementation
+		FUNC func;
+			PROC proc;
+				VAR a : aa, b : bb;
+				START
+					EXECUTE executedboi;
+					IF 45 * 7 THEN 
+						ifworked SET 10 
+					FI
+				STOP
+			;
+
+			WHILE 2 * 3 + 4 / 5 - 6
+				whileboi SET 9000
+			ELIHW
+		;
+		
+		START
+			UpperCase SET 3 + 9
+		STOP
+	.
+
+TERMINATE
+
+OUTPUT:
+
+Constant pi set to 3
+Constant a set to 1
+Variable b set to baa
+Variable c set to caa
+Type testtype declared
+Program testprogram declaration unit detected
+Variable a set to aa
+Variable b set to bb
+executedboi executed
+Multiplication detected
+ifworked assigned
+If statement detected
+Compound statement detected
+Procedure proc declared
+Multiplication detected
+Division detected
+Addition detected
+Subtraction detected
+whileboi assigned
+While loop detected
+Function func declared
+Parsing error on line 35: syntax error
+
+

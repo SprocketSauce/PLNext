@@ -1,0 +1,39 @@
+PROGRAM
+	DECL :: testprogram
+		CONST pi IS 3,
+		a IS 1;
+
+		VAR b : baa,
+		c : caa;
+
+		TYPE testtype => [15 TO disaster];
+
+		PROC myproc(a;b;c)
+
+		FUNC myfunc(d)
+
+	DECLARATION END
+
+	IMPL :: testimplementation
+		FUNC func;
+			PROC proc;
+				VAR a : aa, b : bb;
+				START
+					EXECUTE executedboi;
+					IF 45 * 7 THEN 
+						ifworked SET 10 
+					FI
+				STOP
+			;
+
+			WHILE 2 * 3 + 4 / 5 - 6
+				whileboi SET 9000
+			ELIHW
+		;
+		
+		START
+			settyboi SET 3 + 9
+		STOP
+	.
+
+TERMINATE
